@@ -84,3 +84,144 @@ Hope You Like Site</p><cite>~ Made By Ishaan Yogesh Singh</cite>
  <!-- Testimonials Page End -->
 	</body>
 </html>
+	/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.slide{
+  position:absolute;
+  left:-100%;
+  opacity:0;
+  transition: all 0.6s ease-in;
+}
+.quotes{
+  position:absolute;
+  color:rgba(255,255,255,0.5);
+  font-size:5em;
+}
+.leftq{
+  top:-25px;
+  left:5px;
+}
+.rightq{
+  bottom:-10px;
+  right:5px;
+}
+.container img{
+  float:left;
+  margin-right: 20px;
+    object-fit: cover;
+}
+#second:checked ~ .two blockquote {
+  background-color:#54885F;
+}
+.two blockquote:after{
+  border: solid transparent; 
+  border-top-color: purple;
+  border-left-color:purple;
+  border-width: 10px;
+}
+#third:checked ~ .three blockquote{
+  background-color:#54885F;
+}
+.three blockquote:after{
+  border: solid transparent; 
+  border-top-color: #54885F;
+  border-left-color: #54885F;
+  border-width: 10px;
+}
+@media only screen and (max-width: 480px){
+  .container,
+   blockquote{
+    width: 100%;
+  }
+}
+#first:checked ~ label.first {
+  border-width:6px;
+  border-color:#DB532B;
+}
+#second:checked ~ label.second {
+  border-width:6px; border-color:purple;
+}
+#third:checked ~ label.third {
+  border:6px solid #54885F;
+}
+ 
+#first:checked ~ div.one {
+  left:0;
+  opacity:1;
+}
+#second:checked ~ div.two {
+  left:0;
+  opacity:1;
+}
+#third:checked ~ div.three {
+  left:0;
+  opacity:1;
+}
+	
