@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Digi Taekwondo Dictonary</title>
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <meta name="description" content="This site is made for giving more information about Taekwondo.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="canonical" href="urlhere" />
+    <style>
+       /* Navbar container */
+
+.navbar {
+  overflow: hidden;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: springgreen;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: springgreen;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: black;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #808080;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: springgreen;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: red;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.slide{
+  position:absolute;
+  left:-100%;
+  opacity:0;
+  transition: all 0.6s ease-in;
+}
+.quotes{
+  position:absolute;
+  color:rgba(255,255,255,0.5);
+  font-size:5em;
+}
+.leftq{
+  top:-25px;
+  left:5px;
+}
+.rightq{
+  bottom:-10px;
+  right:5px;
+}
+.container img{
+  float:left;
+  margin-right: 20px;
+    object-fit: cover;
+}
+#second:checked ~ .two blockquote {
+  background-color:#54885F;
+}
+.two blockquote:after{
+  border: solid transparent; 
+  border-top-color: purple;
+  border-left-color:purple;
+  border-width: 10px;
+}
+#third:checked ~ .three blockquote{
+  background-color:#54885F;
+}
+.three blockquote:after{
+  border: solid transparent; 
+  border-top-color: #54885F;
+  border-left-color: #54885F;
+  border-width: 10px;
+}
+@media only screen and (max-width: 480px){
+  .container,
+   blockquote{
+    width: 100%;
+  }
+}
+#first:checked ~ label.first {
+  border-width:6px;
+  border-color:#DB532B;
+}
+#second:checked ~ label.second {
+  border-width:6px; border-color:purple;
+}
+#third:checked ~ label.third {
+  border:6px solid #54885F;
+}
+ 
+#first:checked ~ div.one {
+  left:0;
+  opacity:1;
+}
+#second:checked ~ div.two {
+  left:0;
+  opacity:1;
+}
+#third:checked ~ div.three {
+  left:0;
+  opacity:1;
+}
+#A {
+  background-color:#FFE2B7;
+}
+#H {
+  background-color: #353535;
+  color: rgb(219, 189, 107);
+}
+.checked {
+  color: orange;
+}
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.shadow-effect {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+border:1px solid #ECECEC;
+  box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.02);
+}
+#customers-testimonials .shadow-effect p {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 17px 0;
+  font-weight: 300;
+}
+.testimonial-name {
+  margin: -17px auto 0;
+  display: table;
+  width: auto;
+  background: #3190E7;
+  padding: 9px 35px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 9px 18px rgba(0,0,0,0.12), 0 5px 7px rgba(0,0,0,0.05);
+}
+#customers-testimonials .item {
+  text-align: center;
+  padding: 50px;
+  margin-bottom:80px;
+  opacity: .2;
+  -webkit-transform: scale3d(0.8, 0.8, 1);
+  transform: scale3d(0.8, 0.8, 1);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#customers-testimonials .owl-item.active.center .item {
+  opacity: 1;
+  -webkit-transform: scale3d(1.0, 1.0, 1);
+  transform: scale3d(1.0, 1.0, 1);
+}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+  max-width: 90px;
+  margin: 0 auto 17px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+  background: #3190E7;
+  transform: translate3d(0px, -50%, 0px) scale(0.7);
+}
+#customers-testimonials.owl-carousel .owl-dots{
+display: inline-block;
+width: 100%;
+text-align: center;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot{
+display: inline-block;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+  background: #3190E7;
+  display: inline-block;
+  height: 20px;
+  margin: 0 2px 5px;
+  transform: translate3d(0px, -50%, 0px) scale(0.3);
+  transform-origin: 50% 50% 0;
+  transition: all 250ms ease-out 0s;
+  width: 20px;
+}
+/* Slideshow container */
+.slideshow-container {
+  position: relative;
+  background: #f1f1f1f1;
+}
+
+/* Slides */
+.mySlides {
+  display: none;
+  padding: 80px;
+  text-align: center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Add an italic font style to all quotes */
+q {font-style: italic;}
+
+/* Add a blue color to the author */
+.author {color: cornflowerblue;}
+.female {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+/* Star Rating For 3rd Slide */
+.checked {
+  color: orange;
+}body {
+  background-image: url('img_girl.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.shadow-effect {
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;
+  text-align: center;
+  border: 1px solid #ececec;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.10), 0 15px 12px rgba(0, 0, 0, 0.02);
+}
+#customers-testimonials .shadow-effect p {
+  font-family: inherit;
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0 0 17px 0;
+  font-weight: 300;
+}
+.testimonial-name {
+  margin: -17px auto 0;
+  display: table;
+  width: auto;
+  background: #3190e7;
+  padding: 9px 35px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 9px 18px rgba(0, 0, 0, 0.12), 0 5px 7px rgba(0, 0, 0, 0.05);
+}
+#customers-testimonials .item {
+  text-align: center;
+  padding: 50px;
+  margin-bottom: 80px;
+  opacity: 0.2;
+  -webkit-transform: scale3d(0.8, 0.8, 1);
+  transform: scale3d(0.8, 0.8, 1);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+#customers-testimonials .owl-item.active.center .item {
+  opacity: 1;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+}
+.owl-carousel .owl-item img {
+  transform-style: preserve-3d;
+  max-width: 90px;
+  margin: 0 auto 17px;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+  background: #3190e7;
+  transform: translate3d(0px, -50%, 0px) scale(0.7);
+}
+#customers-testimonials.owl-carousel .owl-dots {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot {
+  display: inline-block;
+}
+#customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+  background: #3190e7;
+  display: inline-block;
+  height: 20px;
+  margin: 0 2px 5px;
+  transform: translate3d(0px, -50%, 0px) scale(0.3);
+  transform-origin: 50% 50% 0;
+  transition: all 250ms ease-out 0s;
+  width: 20px;
+}
+html,body {
+  font-family: 'Raleway', sans-serif;
+  padding: 1em 2em;
+  font-size: 18px;
+  background: #222;
+  color: #aaa
+}
+
+h1,h2 {
+  font-weight: 200;
+  margin: 0.4em 0;
+}
+h1 { font-size: 3.5em; }
+h2 {
+  color: #888;
+  font-size: 2em;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+  <a href=" #H">Home</a>
+  <a href="#A">About Us</a>
+  <a href="#Achievements">Achievements</a>
+  <a href="#T">Testimonials</a>
+  <a href=" #f">Feedback</a>
+<div class="dropdown">
+    <button class="dropbtn">Media
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Photo</a>
+      <a href="#">Video</a>
+    </div>
+  </div>
+   <a href="https://forms.zohopublic.in/ishaansingh/form/ContactUs/formperma/AEp-TEY9ZMcubjtpOOvy9PwkVBxBOjMiJwRJTtqPBNE" target="_blank">Contact us</a>
+  </div>
+  <table>
+    <tr>
+  <a href="Blog.html"><button class="button"><span>Taekwondo Q&A</span></button></a>
+    </tr>
+    <tr>
+  <a href="https://www.youtube.com/channel/UCjVSk_sgBuVKtgM6UtZQIgw" target="_blank"><button class="button"><span>Youtube TTV</span></button></a>
+    </tr>
+    <tr>
+
+    </tr>
+  </table>
+  <h1>This is Website For
+    <span
+       class="txt-rotate"
+       data-period="2000"
+       data-rotate='[ "Taekwondo Player.", "Taekwondo Lover.", "Taekwondo Researches.","& For Informatious Mindset!" ]'></span>
+  </h1>
+ <!--Home Page Start-->
+ <table>
+ <div id="H">
+  <h2 align="center">Welcome</h2>
+  <p style="font-size: 20px">Greetings<br>This site is made for giving more information about Taekwondo. 
+<br>
+<br> 
+<br>
+Hope You Like Site</p><cite> ~ Made By Ishaan Yogesh Singh</cite>
+<br>
+<br>
+
+ </div>
+ </table>
+ <!-- Home Page Ends -->
+ <br>
+ <!-- About Us Start -->
+<table id="A">
+    <tr>
+        <td>
+            <img src="Ishaan's Image For Any Thumpnail.png">
+        </td>
+        <td>
+        <h2 style="text-align: center;">About Us</h2>
+        <hr width="70" color="#f3971b">
+        <br>
+        <br>
+        <strong style="color: black;">
+            Name:- Ishaan Y. Singh<br>
+            Black Belt Taekwondo<br>
+            From Class IX std<br>
+            Web Developer<br>
+            Code Writer<br>
+           <br>
+           <br>
+           <br>
+           <br>
+          <p>Greetings,<br>Myslef Ishaan welcome you all thanks for your valuable time on my website.I like to read poems, have adventurous mindset, lover of Hicking &  also great lover of teachnology, special of HTML5, CSS, JS (Javascript). Hope you enjoy it. Have a nice day ahead !</p>
+            <address>Virar(West),</address>
+            <address>Maharashtra,</address>
+            <address>India.</address>
+
+          </strong>
+            </td>
+    </tr>
+</table>
+ <!-- About Us Ends -->
+ <br>
+ <br>
+ <!-- Achivements Start -->
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   
+<table id="Achievements" border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
+    <!-- Heading Start-->
+    <tr>
+        <td height="180" align="center" valign="middle" colspan="2" bgcolor="292929">
+                <font face="arial" color="#292929" size="6" style="color: white">
+                     Achievements
+                </font>
+                <hr width="70" color="#orange">
+
+        </td>
+    </tr>
+    <!--Heading End-->
+    <div bgcolor: #c2c0c3;>
+    <tr background-color="#c2c0c3;">
+        <td width="66%" valign="top">
+           <font "face="arial" style="color:wheat;">
+            <ul >
+               <h3>
+                   <li>Black Belt Taekwondo</li>
+                   <li>Gold Medalist Online Qwan ki Do Championship</li>
+                   <li>Gold Medalist Rural  Goverment Oragnistaion Championship Of India (Taekwondo)</li>
+                   <li>Certified By NSS (National Service Scheme) For Participating In Spit Free India Movement </li>
+                   <li>Certified By NCC(National Cadet Corps)'A' Grade Certificate</li>
+                   <li>And Other Certificate</li>
+               </h3>
+            </ul>
+           </font>
+        </td>
+    </div>
+
+    </tr>
+    <tr>
+        <td>
+            &nbsp;
+        </td>
+    </tr>
+</table>
+</td>
+
+</tr>
+
+<!-- Achivement End -->
+ <br>
+<!-- Testimonials Start -->
+<h2 align="center" style="color: #F4A460">Testimonials</h2>
+<hr width="70" color=" orange">
+<!-- Slideshow container -->
+<div class="slideshow-container" id="T">
+
+<!-- Full-width slides/quotes -->
+<div class="mySlides">
+<img src="data:image/jpeg;base64,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" alt="avtaar" width="50" height="50">
+<br>
+<br>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<br>
+<q>The site has a most useful & uncommon information of Taekwondo </q>
+<p class="author">- John Keats</p>
+</div>
+
+<div class="mySlides">
+
+<img src="men.jpg" alt="avtaar" width="46" height="50">
+<br>
+<br>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star-checked"></span>
+<span class="fa fa-star-half checked"></span>
+<br>
+<q>The More I Learn,<br>The More I Know<br>Taekwondo Is A Life Long Journey</q>
+<p class="author"><em>- Ernest Hemingway</em></p>
+</div>
+
+<div class="mySlides">
+<img src="Female Avatar.png" alt="avtaar" width="100" height="100" id="Female"><br><br>
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star checked"></span>
+<span class="fa fa-star"></span>
+<br><br>
+<q>The site is very cool & simple for Being Used. The website Provides Many Useful Information In Field Of Taekwondo</q>
+<p class="author"><em>- Thomas A. Edison</em></p>
+</div>
+
+<!-- Next/prev buttons -->
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dots/bullets/indicators -->
+<div class="dot-container">
+<span class="dot" onclick="currentSlide(1)"></span>
+<span class="dot" onclick="currentSlide(2)"></span>
+<span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<!-- Testimonials End -->
+
+<nav class="navbar fixed-top navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Fixed top</a>
+  </div>
+</nav>
+<br>
+<br>
+
+<!-- Footer -->
+<table id="header" border="1" width="100%" cellpadding="0" cellspacing="0" bgcolor="#353535">
+    <tr>
+        <td>
+            <table border="0" width="85%" cellpadding="15" cellspacing="0" align="center">
+
+                <tr>
+                    
+                    <td width="25%" valign="top">
+                        <a href="https://www.facebook.com/renu2078" target="_blank">
+                        <font face="arial" color="#f3971b" size="5">
+                            <span class="fa fa-facebook-square" aria-hidden="true"></span>
+                            Facebook
+                        </font>
+                        </a>
+                    </td>
+                    
+
+                    </td>
+                    <td width="25%" valign="top">
+                      <a href="https://www.instagram.com/tkdishaan/?hl=en" target="_blank">
+                        <font face="arial" color="#f3971b" size="5">
+                            <span class="fa fa-instagram" aria-hidden="true"></span>
+                            Instagram
+                        </font>
+                      </a>
+                    </td>
+                    <br>
+                    <br>
+                    <br>
+                
+                <tr>
+                    <td width="25%" valign="top">
+                        <a href="https://www.youtube.com/channel/UCjVSk_sgBuVKtgM6UtZQIgw" target="_blank">
+                        <font face="arial" color="#f3971b" size="5">
+                            <span class="fa fa-youtube-square" aria-hidden="true"></span>
+                            YouTube
+                        </font>
+                       </a>
+                       <a href="Blog.html">
+                        <td width="25%" valign="top">
+                          <font face="arial" color="#f3971b" size="5">
+                              <span class="fa fa-rss-square" aria-hidden="true"></span>
+                              Blog
+                          </font>
+                          
+                      </td>
+                       </a>
+                    </td>
+                    </tr>
+                <tr>
+                    <td colspan="3">
+                        &nbsp;
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<!-- Footer End -->
+<script>
+    var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+jQuery(document).ready(function($) {
+  "use strict";
+  //  TESTIMONIALS CAROUSEL HOOK
+  $('#customers-testimonials').owlCarousel({
+      loop: true,
+      center: true,
+      items: 3,
+      margin: 0,
+      autoplay: true,
+      dots:true,
+      autoplayTimeout: 8500,
+      smartSpeed: 450,
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1170: {
+          items: 3
+        }
+      }
+  });
+});
+
+
+</script>
+<!-- Online Chat Start -->
+<a class="typeform-share button" href="https://form.typeform.com/to/g1r4q3EM?typeform-medium=embed-snippet" data-mode="popover" style="width:54px;height:54px;position:fixed;box-shadow:0px 2px 12px rgba(0, 0, 0, 0.06), 0px 2px 4px rgba(0, 0, 0, 0.08);right:26px;bottom:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;background:#0445AF;overflow:hidden;line-height:0;" target="_blank"> <span class="icon"> <svg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg' style="margin-top:6px;"> <path d='M21 0H0V9L10.5743 24V16.5H21C22.6567 16.5 24 15.1567 24 13.5V3C24 1.34325 22.6567 0 21 0ZM7.5 9.75C6.672 9.75 6 9.07875 6 8.25C6 7.42125 6.672 6.75 7.5 6.75C8.328 6.75 9 7.42125 9 8.25C9 9.07875 8.328 9.75 7.5 9.75ZM12.75 9.75C11.922 9.75 11.25 9.07875 11.25 8.25C11.25 7.42125 11.922 6.75 12.75 6.75C13.578 6.75 14.25 7.42125 14.25 8.25C14.25 9.07875 13.578 9.75 12.75 9.75ZM18 9.75C17.172 9.75 16.5 9.07875 16.5 8.25C16.5 7.42125 17.172 6.75 18 6.75C18.828 6.75 19.5 7.42125 19.5 8.25C19.5 9.07875 18.828 9.75 18 9.75Z' fill='white' /> </svg> </span> </a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+<!-- Online Chat End -->
+</html>
+</html>
